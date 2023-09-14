@@ -1,8 +1,9 @@
-const express = require('express');
-const router = express.Router();
+var express = require("express");
+var router = express.Router();
 
-const brandController = require('../../controllers/brandController');
-
-router.get('/all', brandController.getAllBrands);
+/* GET brands data */
+router.get("/", function (req, res, next) {
+  res.json({ message: "Welcome to the API" });
+});
 
 module.exports = router;
