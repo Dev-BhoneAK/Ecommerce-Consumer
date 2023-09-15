@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import ProductCard from "../home/ProductCard";
+import ProductCard from "../Home/ProductCard";
 
 const settings = {
   dots: false,
