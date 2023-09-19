@@ -1,21 +1,12 @@
-const blogModel = require('../models/blogModel')
-const { validationResult } = require('express-validator')
+/**
+ * @module blogService
+ */
 
-exports.createBlog = async (req, res, next) => {
-    try {
-        const errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            console.log(errors)
-            return res.status(400).json({ errors: errors.array() })
-        }
-        const { title, content, author } = req.body
-        const blog = await blogModel.create({
-            title,
-            content,
-            author,
-        })
-        res.status(201).json({ blog })
-    } catch (error) {
-        next(error)
-    }
-}
+const blogModel = require('../models/blogModel');
+
+// @desc    Get All Blogs
+// @controller   getAllBlogs
+exports.getAllBlogs = async () => {
+    const blogs = await blogModel.find().sort({ publishedDate: -1 });
+    return blogs;
+};
