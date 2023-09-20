@@ -1,9 +1,10 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-/* GET brands data */
-router.get('/', function (req, res, next) {
-    res.json({ message: 'Welcome to the API' })
-})
+const brandController = require('../../controllers/brandController');
 
-module.exports = router
+// @desc  Get All Brands
+// @access  Public
+router.get('/', brandController.getAllBrands);
+
+module.exports = router;
