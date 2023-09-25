@@ -4,8 +4,8 @@ import Home from 'components/Home';
 import ProductDetail from 'components/ProductDetail';
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer/Footer';
-import Brands from 'components/Home/BrandSlider';
-import Blogs from 'components/Home/BlogSlider';
+import Brands from 'components/Brands';
+import Blogs from 'components/Blogs';
 import PageNotFound from 'components/common/PageNotFound';
 import LoadingSkeleton from 'components/ProductDetail/LoadingSkeleton';
 
