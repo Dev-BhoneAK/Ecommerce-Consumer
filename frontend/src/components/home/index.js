@@ -2,8 +2,8 @@ import MainSlider from './MainSlider';
 import Banner from './Banner';
 import ProductListings from '../common/ProductListings';
 import TopCollection from './TopCollection';
-import Blogs from './BlogSlider';
-import Brands from './BrandSlider';
+import BlogSlider from './BlogSlider';
+import BrandSlider from './BrandSlider';
 const Home = () => {
     return (
         <>
@@ -13,8 +13,8 @@ const Home = () => {
             <ProductListings title={'New Arrivals'} />
             <TopCollection />
             <ProductListings title={'Trending Offers'} />
-            <Blogs />
-            <Brands />
+            <BlogSlider />
+            <BrandSlider />
         </>
     );
 };
