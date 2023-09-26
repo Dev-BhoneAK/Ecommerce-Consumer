@@ -4,6 +4,7 @@ import ProductListings from '../common/ProductListings';
 import TopCollection from './TopCollection';
 import BlogSlider from './BlogSlider';
 import BrandSlider from './BrandSlider';
+
 const Home = () => {
     return (
         <>
