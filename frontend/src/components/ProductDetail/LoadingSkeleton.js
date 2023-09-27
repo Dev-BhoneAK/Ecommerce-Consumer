@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../common/Header/Header";
+import Header from 'components/common/Header';
 const LoadingSkeleton = () => {
     return (
         <div className="loader_skeleton">
@@ -84,6 +84,6 @@ const LoadingSkeleton = () => {
                 </div>
             </section>
         </div>
-    )
-}
+    );
+};
 export default LoadingSkeleton;
