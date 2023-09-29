@@ -13,9 +13,9 @@ const Footer = () => {
                             <div className="footer-contant">
                                 <div className="footer-logo">
                                     <img
-                                        src="/assets/icons/logo.png"
+                                        src="/company-logo.png"
                                         className="img-fluid lazyload"
-                                        alt=""
+                                        alt="Company Logo"
                                     />
                                 </div>
                                 <p>
