@@ -1,15 +1,18 @@
 # Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+frontend/logs
+backend-api/logs
 
 # production
-/build
+frontend/build
+backend-api/dist
+
+# assets
+frontend/public/assets
+backend-api/public/assets
 
 # Dependency directories
-node_modules/
+frontend/node_modules
+backend-api/node_modules
 
 # misc
 .DS_Store
@@ -21,5 +24,6 @@ node_modules/
 *.tgz
 
 # dotenv environment variables file
-.env*
+frontend/.env*
+backend-api/.env*
 
