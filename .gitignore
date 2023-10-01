@@ -27,3 +27,8 @@ backend-api/node_modules
 frontend/.env*
 backend-api/.env*
 
+# production related
+nginx
+backend-api/Dockerfile
+backend-api/.dockerignore
+
