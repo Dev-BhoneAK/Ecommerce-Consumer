@@ -17,11 +17,16 @@
         .overlay {
             position: relative;
             border: 1px solid $round-border;
-        }
-
-        img {
-            width: 50%;
-            height: auto;
+            .border-brand {
+                height: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 50%;
+                    height: auto;
+                }
+            }
         }
     }
 
