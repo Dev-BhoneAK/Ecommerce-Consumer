@@ -54,7 +54,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/apple.png"
+                                                src="/assets/images/brands/apple.png"
                                                 alt=""
                                             />
                                         </a>
@@ -64,7 +64,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/aukey.png"
+                                                src="/assets/images/brands/aukey.png"
                                                 alt=""
                                             />
                                         </a>
@@ -74,7 +74,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/logitech.png"
+                                                src="/assets/images/brands/logitech.png"
                                                 alt=""
                                             />
                                         </a>
@@ -84,7 +84,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/casestudi.png"
+                                                src="/assets/images/brands/casestudi.png"
                                                 alt=""
                                             />
                                         </a>
@@ -94,7 +94,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/elegant.png"
+                                                src="/assets/images/brands/elegant.png"
                                                 alt=""
                                             />
                                         </a>
@@ -104,7 +104,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/jbl.png"
+                                                src="/assets/images/brands/jbl.png"
                                                 alt=""
                                             />
                                         </a>
@@ -114,7 +114,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/katespade.png"
+                                                src="/assets/images/brands/katespade.png"
                                                 alt=""
                                             />
                                         </a>
@@ -124,7 +124,7 @@ const BrandSlider = () => {
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/premium.png"
+                                                src="/assets/images/brands/premium.png"
                                                 alt=""
                                             />
                                         </a>
@@ -132,14 +132,14 @@ const BrandSlider = () => {
                                 </div>
                                 {/*<div>*/}
                                 {/*    <div className="logo-block">*/}
-                                {/*        <a href="#"><img src="/assets/images/brand_logos/switcheasy.png" alt=""/></a>*/}
+                                {/*        <a href="#"><img src="/assets/images/brands/switcheasy.png" alt=""/></a>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
                                 <div>
                                     <div className="logo-block">
                                         <a href="#">
                                             <img
-                                                src="/assets/images/brand_logos/viewsonic.png"
+                                                src="/assets/images/brands/viewsonic.png"
                                                 alt=""
                                             />
                                         </a>
