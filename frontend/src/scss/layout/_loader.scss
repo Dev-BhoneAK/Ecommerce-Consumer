@@ -148,6 +148,16 @@
         }
     }
 
+    .gym-slider {
+        .home-slider {
+            .home {
+                height: calc(
+                    300px + (670 - 300) * ((100vw - 320px) / (1920 - 320))
+                );
+            }
+        }
+    }
+
     .home-slider {
         .home {
             background: $bg-loader;
@@ -270,6 +280,52 @@
 
         &.absolute-banner {
             overflow: unset;
+        }
+    }
+
+    .vegetables-category {
+        .category-boxes {
+            height: 126px;
+        }
+    }
+
+    .shop-main {
+        .small-slider {
+            .home {
+                height: 336px;
+                background-color: #f8f8f8;
+            }
+        }
+    }
+
+    .title1 {
+        h4 {
+            width: 140px;
+            height: 22px;
+            margin: 0 auto 10px;
+            @extend %loader-dark;
+        }
+
+        h2 {
+            width: 280px;
+            height: 44px;
+            margin: 0 auto 10px;
+            @extend %loader-dark;
+        }
+    }
+
+    .title8 {
+        h2 {
+            width: 220px;
+            height: 24px;
+            margin-bottom: 10px;
+            @extend %loader-dark;
+        }
+        p {
+            width: 170px;
+            height: 20px;
+            margin-bottom: 10px;
+            @extend %loader-dark;
         }
     }
 
@@ -1127,108 +1183,5 @@
 .layout-8 {
     .loader_skeleton {
         padding: 0 80px;
-    }
-}
-
-.product-box {
-    .img-wrapper {
-        width: 100%;
-        height: calc(180px + (350 - 180) * ((100vw - 320px) / (1920 - 320)));
-        background-color: $bg-loader;
-    }
-
-    .product-detail {
-        padding-left: 0;
-
-        h4 {
-            width: calc(100px + (150 - 100) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-            border-radius: 15px;
-            margin-top: 14px;
-            margin-bottom: 12px;
-            @extend %loader-dark;
-        }
-
-        h5 {
-            width: calc(100px + (230 - 100) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
-            border-radius: 15px;
-            margin-top: 8px;
-            @extend %loader-dark;
-
-            &.second {
-                width: calc(
-                    140px + (200 - 140) * ((100vw - 320px) / (1920 - 320))
-                );
-            }
-        }
-
-        h6 {
-            width: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
-            border-radius: 15px;
-            margin-top: calc(
-                14px + (10 - 14) * ((100vw - 320px) / (1920 - 320))
-            );
-            margin-bottom: 12px;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            @extend %loader-dark;
-        }
-    }
-
-    &.product-sm {
-        .img-wrapper {
-            height: calc(
-                150px + (250 - 150) * ((100vw - 320px) / (1920 - 320))
-            );
-        }
-
-        .product-detail {
-            h5 {
-                width: calc(
-                    100px + (180 - 100) * ((100vw - 320px) / (1920 - 320))
-                );
-            }
-        }
-    }
-
-    &.product-style-5 {
-        &.product-box {
-            h6 {
-                width: calc(
-                    100px + (150 - 100) * ((100vw - 320px) / (1920 - 320))
-                );
-                height: calc(
-                    14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))
-                );
-                border-radius: 15px;
-                margin-bottom: 18px;
-                @extend %loader-dark;
-            }
-            h5 {
-                width: 40px;
-                height: calc(
-                    14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))
-                );
-                border-radius: 15px;
-                margin-bottom: 10px;
-                @extend %loader-dark;
-            }
-            h4 {
-                width: 80px;
-                height: calc(
-                    14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))
-                );
-                border-radius: 15px;
-                @extend %loader-dark;
-            }
-            .img-wrapper {
-                background-color: $white;
-                height: calc(
-                    90px + (130 - 90) * ((100vw - 320px) / (1920 - 320))
-                );
-            }
-        }
     }
 }
