@@ -27,11 +27,12 @@ const settings = {
     ],
 };
 
-const BlogSlider = () => {
+const BlogSlider = ({ sectionTitle }) => {
     return (
         <section className="blog ratio2_3 gym-blog section-b-space overflow-hidden">
             <div className="container">
                 <div className="row">
+                    {sectionTitle}
                     <div className="col-md-12">
                         <div className="slide-3 no-arrow slick-default-margin">
                             <Slider {...settings}>
