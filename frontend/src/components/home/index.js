@@ -1,3 +1,4 @@
+import SectionTitle from './SectionTitle';
 import MainSlider from './MainSlider';
 import Banner from './Banner';
 import ProductListings from '../common/ProductListings';
@@ -10,11 +11,17 @@ const Home = () => {
         <>
             <MainSlider />
             <Banner />
-            <ProductListings title={'Big Savings'} />
-            <ProductListings title={'New Arrivals'} />
+            <ProductListings
+                sectionTitle={<SectionTitle title={'Big Savings'} />}
+            />
+            <ProductListings
+                sectionTitle={<SectionTitle title={'New Arrivals'} />}
+            />
             <TopCollection />
-            <ProductListings title={'Trending Offers'} />
-            <BlogSlider />
+            <ProductListings
+                sectionTitle={<SectionTitle title={'Trending Offers'} />}
+            />
+            <BlogSlider sectionTitle={<SectionTitle title={'Blogs'} />} />
             <BrandSlider />
         </>
     );
