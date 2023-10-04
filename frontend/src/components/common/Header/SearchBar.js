@@ -26,7 +26,7 @@ const Search = () => {
           onChange={() => setSearch(true)}
         />
         <button type="submit" name="nav-submit-button" className="btn-search">
-          <i class="fa-solid fa-magnifying-glass" />
+          <i className="fa-solid fa-magnifying-glass" />
         </button>
         <div
           className="tt-menu"
