@@ -5,7 +5,7 @@ const SectionTitle = ({ title }) => {
         <div className="col-12">
             <div className="title-basic">
                 <h2 className="title font-fraunces">
-                    <i class="fa-solid fa-bolt" />
+                    <i className="fa-solid fa-bolt" />
                     {title}
                 </h2>
             </div>
