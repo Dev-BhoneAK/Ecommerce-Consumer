@@ -60,22 +60,22 @@ const Specification = () => {
                     <ul className="social-icons">
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-facebook" />
+                                <i className="fa-brands fa-facebook" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-x-twitter" />
+                                <i className="fa-brands fa-x-twitter" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-vk" />
+                                <i className="fa-brands fa-vk" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-solid fa-link" />
+                                <i className="fa-solid fa-link" />
                             </a>
                         </li>
                     </ul>
