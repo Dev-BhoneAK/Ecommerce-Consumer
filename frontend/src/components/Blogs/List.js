@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { BLOGS_URL } from 'config/API';
 
 const List = () => {
-    const { data, isLoading, error } = useQuery(['blogs'], () =>
+    const { data, isLoading } = useQuery(['blogs'], () =>
         axios.get(BLOGS_URL)
     );
 
