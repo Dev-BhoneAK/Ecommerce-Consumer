@@ -1,5 +1,9 @@
-import React from 'react';
+import axios from 'axios';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+
+import { BRANDS_URL } from 'config/API';
 
 const settings = {
     dots: false,
@@ -43,6 +47,11 @@ const settings = {
     ],
 };
 const BrandSlider = () => {
+    const { data, isLoading } = useQuery(['brands'], () =>
+        axios.get(BRANDS_URL)
+    );
+
+    if (isLoading) return 'Loading...';
     return (
         <section className="section-b-space bg-light brand-logos">
             <div className="container">
@@ -50,101 +59,9 @@ const BrandSlider = () => {
                     <div className="col-md-12">
                         <div className="slide-6 no-arrow">
                             <Slider {...settings}>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/apple.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/aukey.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/logitech.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/casestudi.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/elegant.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/jbl.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/katespade.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/premium.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                {/*<div>*/}
-                                {/*    <div className="logo-block">*/}
-                                {/*        <a href="#"><img src="/assets/images/brands/switcheasy.png" alt=""/></a>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
-                                <div>
-                                    <div className="logo-block">
-                                        <a href="#">
-                                            <img
-                                                src="/assets/images/brands/viewsonic.png"
-                                                alt=""
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
+                                {data?.data.map((brand) => (
+                                    <Brand brandData={brand} />
+                                ))}
                             </Slider>
                         </div>
                     </div>
@@ -153,4 +70,14 @@ const BrandSlider = () => {
         </section>
     );
 };
+
+const Brand = ({ brandData }) => (
+    <div>
+        <div className="logo-block">
+            <a href="#">
+                <img src={`assets/${brandData.logo}`} alt={brandData.name} />
+            </a>
+        </div>
+    </div>
+);
 export default BrandSlider;
