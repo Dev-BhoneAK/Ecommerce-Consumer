@@ -2,42 +2,42 @@ import React from 'react';
 
 const BlogDetail = () => {
     return (
-        <section class="blog-detail-page section-b-space ratio2_3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 blog-detail">
+        <section className="blog-detail-page section-b-space ratio2_3">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 blog-detail">
                         <img
                             src="../assets/images/blogs/2.jpg"
-                            class="blog-image lazyload"
+                            className="blog-image lazyload"
                             alt="Blog Detail"
                         />
                         <h3>
                             Also the leap into electronic typesetting, remaining
                             essentially unchanged.
                         </h3>
-                        <ul class="post-social">
+                        <ul className="post-social">
                             <li>25 January 2018</li>
                             <li>Posted By : Admin Admin</li>
                             <li>
                                 <ul className="social-icons">
                                     <li>
                                         <a href="#">
-                                            <i class="fa-brands fa-facebook" />
+                                            <i className="fa-brands fa-facebook" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa-brands fa-x-twitter" />
+                                            <i className="fa-brands fa-x-twitter" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa-brands fa-vk" />
+                                            <i className="fa-brands fa-vk" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa-solid fa-link" />
+                                            <i className="fa-solid fa-link" />
                                         </a>
                                     </li>
                                 </ul>
@@ -86,7 +86,7 @@ const BlogDetail = () => {
                         </p>
                     </div>
                 </div>
-                <div class="row section-b-space blog-advance"></div>
+                <div className="row section-b-space blog-advance"></div>
             </div>
         </section>
     );
