@@ -130,7 +130,7 @@ const Footer = () => {
                                             <li>
                                                 <a href="#">
                                                     <i
-                                                        class="fa-brands fa-facebook"
+                                                        className="fa-brands fa-facebook"
                                                         aria-hidden="true"
                                                     ></i>
                                                 </a>
@@ -138,7 +138,7 @@ const Footer = () => {
                                             <li>
                                                 <a href="#">
                                                     <i
-                                                        class="fa-brands fa-instagram"
+                                                        className="fa-brands fa-instagram"
                                                         aria-hidden="true"
                                                     />
                                                 </a>
@@ -146,7 +146,7 @@ const Footer = () => {
                                             <li>
                                                 <a href="#">
                                                     <i
-                                                        class="fa-brands fa-x-twitter"
+                                                        className="fa-brands fa-x-twitter"
                                                         aria-hidden="true"
                                                     />
                                                 </a>
@@ -154,7 +154,7 @@ const Footer = () => {
                                             <li>
                                                 <a href="#">
                                                     <i
-                                                        class="fa-brands fa-vk"
+                                                        className="fa-brands fa-vk"
                                                         aria-hidden="true"
                                                     />
                                                 </a>
