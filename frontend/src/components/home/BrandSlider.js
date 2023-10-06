@@ -11,7 +11,7 @@ const settings = {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     responsive: [
         {
             breakpoint: 1367,
@@ -46,6 +46,7 @@ const settings = {
         },
     ],
 };
+
 const BrandSlider = () => {
     const { data, isLoading } = useQuery(['brands'], () =>
         axios.get(BRANDS_URL)
@@ -60,7 +61,7 @@ const BrandSlider = () => {
                         <div className="slide-6 no-arrow">
                             <Slider {...settings}>
                                 {data?.data.map((brand) => (
-                                    <Brand brandData={brand} />
+                                    <Brand brandData={brand} key={brand._id} />
                                 ))}
                             </Slider>
                         </div>
@@ -74,9 +75,9 @@ const BrandSlider = () => {
 const Brand = ({ brandData }) => (
     <div>
         <div className="logo-block">
-            <a href="#">
+            <Link to="">
                 <img src={`assets/${brandData.logo}`} alt={brandData.name} />
-            </a>
+            </Link>
         </div>
     </div>
 );

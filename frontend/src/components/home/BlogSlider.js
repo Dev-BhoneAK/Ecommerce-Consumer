@@ -1,6 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+
+import { BLOGS_URL } from 'config/API';
 
 const settings = {
     infinite: true,
@@ -28,77 +32,21 @@ const settings = {
 };
 
 const BlogSlider = ({ sectionTitle }) => {
+    const { data, isLoading } = useQuery(['blogs'], () => axios.get(BLOGS_URL));
+
+    if (isLoading) return 'Loading...';
+
     return (
-        <section className="blog ratio2_3 gym-blog section-b-space overflow-hidden">
+        <section className="blog ratio2_3 overflow-hidden">
             <div className="container">
                 <div className="row">
                     {sectionTitle}
                     <div className="col-md-12">
                         <div className="slide-3 no-arrow slick-default-margin">
                             <Slider {...settings}>
-                                <Link to="/blogs/1">
-                                    <div className="col-md-12">
-                                        <div className="classic-effect">
-                                            <div>
-                                                <img
-                                                    alt=""
-                                                    src="/assets/images/blogs/1.jpg"
-                                                    className="img-fluid lazyload bg-img"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="blog-details">
-                                            <h4>25 January 2018</h4>
-                                            <p>
-                                                Lorem ipsum dolor sit
-                                                consectetur adipiscing elit,
-                                            </p>
-                                            <h6>by: John Dio , 2 Comment</h6>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/blogs/2">
-                                    <div className="col-md-12">
-                                        <div className="classic-effect">
-                                            <div>
-                                                <img
-                                                    alt=""
-                                                    src="../assets/images/blogs/2.jpg"
-                                                    className="img-fluid lazyload bg-img"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="blog-details">
-                                            <h4>25 January 2018</h4>
-                                            <p>
-                                                Lorem ipsum dolor sit
-                                                consectetur adipiscing elit,
-                                            </p>
-                                            <h6>by: John Dio , 2 Comment</h6>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/blogs/3">
-                                    <div className="col-md-12">
-                                        <div className="classic-effect">
-                                            <div>
-                                                <img
-                                                    alt=""
-                                                    src="../assets/images/blogs/3.jpg"
-                                                    className="img-fluid lazyload bg-img"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="blog-details">
-                                            <h4>25 January 2018</h4>
-                                            <p>
-                                                Lorem ipsum dolor sit
-                                                consectetur adipiscing elit,
-                                            </p>
-                                            <h6>by: John Dio , 2 Comment</h6>
-                                        </div>
-                                    </div>
-                                </Link>
+                                {data?.data.map((blog) => (
+                                    <Blog blogData={blog} key={blog._id} />
+                                ))}
                             </Slider>
                         </div>
                     </div>
@@ -107,4 +55,25 @@ const BlogSlider = ({ sectionTitle }) => {
         </section>
     );
 };
+
+const Blog = ({ blogData }) => (
+    <Link to={`/blogs/${blogData._id}`}>
+        <div className="col-md-12">
+            <div className="classic-effect">
+                <div>
+                    <img
+                        alt={blogData.title}
+                        src={`/assets/${blogData.image}`}
+                        className="img-fluid lazyload bg-img"
+                    />
+                </div>
+            </div>
+            <div className="blog-details">
+                <h4>25 January 2018</h4>
+                <p>Lorem ipsum dolor sit consectetur adipiscing elit,</p>
+                <h6>by: John Dio , 2 Comment</h6>
+            </div>
+        </div>
+    </Link>
+);
 export default BlogSlider;
