@@ -7,4 +7,8 @@ const blogController = require('../../controllers/blogController');
 // @access  Public
 router.get('/', blogController.getAllBlogs);
 
+// @desc  Get Requested Blog
+// @access  Public
+router.get('/:blogId', blogController.getBlog);
+
 module.exports = router;
