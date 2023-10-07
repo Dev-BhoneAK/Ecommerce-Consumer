@@ -6,9 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { BLOGS_URL } from 'config/API';
 
 const List = () => {
-    const { data, isLoading } = useQuery(['blogs'], () =>
-        axios.get(BLOGS_URL)
-    );
+    const { data, isLoading } = useQuery(['blogs'], () => axios.get(BLOGS_URL));
 
     if (isLoading) return <LoadingSkeleton />;
     return (
@@ -27,32 +25,13 @@ const List = () => {
                                     <div className="blog-content">
                                         <div>
                                             <h6>25 January 2018</h6>{' '}
-                                            <h4>
-                                                you how all this mistaken idea
-                                                of denouncing pleasure and
-                                                praising pain was born.
-                                            </h4>
+                                            <h4>{blog.title}</h4>
                                             <ul className="post-social">
                                                 <li>Posted By : Admin Admin</li>
-                                                <li>
-                                                    <i className="fa fa-heart"></i>{' '}
-                                                    5 Hits
-                                                </li>
-                                                <li>
-                                                    <i className="fa fa-comments"></i>{' '}
-                                                    10 Comment
-                                                </li>
                                             </ul>
                                             <p>
-                                                Consequences that are extremely
-                                                painful. Nor again is there
-                                                anyone who loves or pursues or
-                                                desires to obtain pain of
-                                                itself, because it is pain, but
-                                                because occasionally
-                                                circumstances occur in which
-                                                toil and pain can procure him
-                                                some great pleasure.
+                                                {blog.description.slice(0, 100)}
+                                                ...
                                             </p>
                                         </div>
                                     </div>
@@ -60,132 +39,6 @@ const List = () => {
                             </Link>
                         </div>
                     ))}
-                    {/* <div className="col-12 col-lg-6 blog-media">
-                        <Link to="/blogs/1">
-                            <div className="row">
-                                <img
-                                    src="assets/images/blogs/1.jpg"
-                                    className="blog-image lazyload bg-img"
-                                    alt="Blog"
-                                />
-                                <div className="blog-content">
-                                    <div>
-                                        <h6>25 January 2018</h6>{' '}
-                                        <h4>
-                                            you how all this mistaken idea of
-                                            denouncing pleasure and praising
-                                            pain was born.
-                                        </h4>
-                                        <ul className="post-social">
-                                            <li>Posted By : Admin Admin</li>
-                                            <li>
-                                                <i className="fa fa-heart"></i>{' '}
-                                                5 Hits
-                                            </li>
-                                            <li>
-                                                <i className="fa fa-comments"></i>{' '}
-                                                10 Comment
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Consequences that are extremely
-                                            painful. Nor again is there anyone
-                                            who loves or pursues or desires to
-                                            obtain pain of itself, because it is
-                                            pain, but because occasionally
-                                            circumstances occur in which toil
-                                            and pain can procure him some great
-                                            pleasure.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="col-12 col-lg-6 blog-media">
-                        <Link to="/blogs/2">
-                            <div className="row">
-                                <img
-                                    src="assets/images/blogs/3.jpg"
-                                    className="blog-image lazyload bg-img"
-                                    alt="Blog"
-                                />
-                                <div className="blog-content">
-                                    <div>
-                                        <h6>25 January 2018</h6>{' '}
-                                        <h4>
-                                            you how all this mistaken idea of
-                                            denouncing pleasure and praising
-                                            pain was born.
-                                        </h4>
-                                        <ul className="post-social">
-                                            <li>Posted By : Admin Admin</li>
-                                            <li>
-                                                <i className="fa fa-heart"></i>{' '}
-                                                5 Hits
-                                            </li>
-                                            <li>
-                                                <i className="fa fa-comments"></i>{' '}
-                                                10 Comment
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Consequences that are extremely
-                                            painful. Nor again is there anyone
-                                            who loves or pursues or desires to
-                                            obtain pain of itself, because it is
-                                            pain, but because occasionally
-                                            circumstances occur in which toil
-                                            and pain can procure him some great
-                                            pleasure.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="col-12 col-lg-6 blog-media">
-                        <Link to="/blogs/3">
-                            <div className="row">
-                                <img
-                                    src="assets/images/blogs/3.jpg"
-                                    className="blog-image lazyload bg-img"
-                                    alt="Blog"
-                                />
-                                <div className="blog-content">
-                                    <div>
-                                        <h6>25 January 2018</h6>{' '}
-                                        <h4>
-                                            you how all this mistaken idea of
-                                            denouncing pleasure and praising
-                                            pain was born.
-                                        </h4>
-                                        <ul className="post-social">
-                                            <li>Posted By : Admin Admin</li>
-                                            <li>
-                                                <i className="fa fa-heart"></i>{' '}
-                                                5 Hits
-                                            </li>
-                                            <li>
-                                                <i className="fa fa-comments"></i>{' '}
-                                                10 Comment
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Consequences that are extremely
-                                            painful. Nor again is there anyone
-                                            who loves or pursues or desires to
-                                            obtain pain of itself, because it is
-                                            pain, but because occasionally
-                                            circumstances occur in which toil
-                                            and pain can procure him some great
-                                            pleasure.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div> */}
                 </div>
             </div>
         </section>
