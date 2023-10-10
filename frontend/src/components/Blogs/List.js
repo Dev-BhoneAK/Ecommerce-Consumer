@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { BLOGS_URL } from 'config/API';
 
-const List = () => {
+const BlogList = () => {
     const { data, isLoading } = useQuery(['blogs'], () => axios.get(BLOGS_URL));
 
     if (isLoading) return <LoadingSkeleton />;
@@ -14,36 +14,39 @@ const List = () => {
             <div className="container">
                 <div className="row">
                     {data?.data.map((blog) => (
-                        <div className="col-12 col-lg-6 blog-media">
-                            <Link to={`/blogs/${blog.id}`}>
-                                <div className="row">
-                                    <img
-                                        src={`assets${blog.image}`}
-                                        className="blog-image lazyload bg-img"
-                                        alt="Blog"
-                                    />
-                                    <div className="blog-content">
-                                        <div>
-                                            <h6>25 January 2018</h6>{' '}
-                                            <h4>{blog.title}</h4>
-                                            <ul className="post-social">
-                                                <li>Posted By : Admin Admin</li>
-                                            </ul>
-                                            <p>
-                                                {blog.description.slice(0, 100)}
-                                                ...
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
+                        <BlogItem blogData={blog} />
                     ))}
                 </div>
             </div>
         </section>
     );
 };
+
+const BlogItem = ({ blogData }) => (
+    <div className="col-12 col-lg-6 blog-media">
+        <Link to={`/blogs/${blogData._id}`}>
+            <div className="row">
+                <img
+                    src={`assets${blogData.image}`}
+                    className="blog-image lazyload bg-img"
+                    alt={blogData.title}
+                />
+                <div className="blog-content">
+                    <div>
+                        <h6>25 January 2018</h6> <h4>{blogData.title}</h4>
+                        <ul className="post-social">
+                            <li>Posted By : Admin Admin</li>
+                        </ul>
+                        <p>
+                            {blogData.description.slice(0, 100)}
+                            ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </Link>
+    </div>
+);
 
 const LoadingSkeleton = () => (
     // <div className="loader_skeleton">
@@ -110,4 +113,4 @@ const LoadingSkeleton = () => (
     // </div>
 );
 
-export default List;
+export default BlogList;
