@@ -60,18 +60,16 @@ const Blog = ({ blogData }) => (
     <Link to={`/blogs/${blogData._id}`}>
         <div className="col-md-12">
             <div className="classic-effect">
-                <div>
-                    <img
-                        alt={blogData.title}
-                        src={`/assets/${blogData.image}`}
-                        className="img-fluid lazyload bg-img"
-                    />
-                </div>
+                <img
+                    alt={blogData.title}
+                    src={`/assets/${blogData.image}`}
+                    className="img-fluid lazyload bg-img"
+                />
             </div>
             <div className="blog-details">
                 <h4>25 January 2018</h4>
-                <p>Lorem ipsum dolor sit consectetur adipiscing elit,</p>
-                <h6>by: John Dio , 2 Comment</h6>
+                <p>{blogData.title}</p>
+                <h6>by: Admin</h6>
             </div>
         </div>
     </Link>
