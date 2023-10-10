@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialIconsContainer from 'components/common/SocialIconsContainer';
 
 const Specification = () => {
     return (
@@ -55,30 +56,9 @@ const Specification = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="border-product">
-                    <h6 className="product-title">share it</h6>
-                    <ul className="social-icons">
-                        <li>
-                            <a href="#">
-                                <i className="fa-brands fa-facebook" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className="fa-brands fa-x-twitter" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className="fa-brands fa-vk" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className="fa-solid fa-link" />
-                            </a>
-                        </li>
-                    </ul>
+                <div className="post-social">
+                    {/* <h6 className="product-title">share it</h6> */}
+                    <SocialIconsContainer />
                 </div>
             </div>
         </div>
