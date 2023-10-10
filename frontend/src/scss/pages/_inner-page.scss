@@ -1079,31 +1079,6 @@
         }
     }
 
-    .social-icons {
-        margin-top: 5px;
-
-        li {
-            padding-right: 30px;
-
-            a {
-                color: $font-color;
-                transition: all 0.3s ease;
-
-                i {
-                    font-size: 22px;
-                }
-
-                &:hover {
-                    color: var(--theme-color);
-                }
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-    }
-
     .payment-card-bottom {
         margin-top: 10px;
 
@@ -2610,5 +2585,28 @@
     .table td {
         font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
         text-transform: capitalize;
+    }
+}
+
+.social-icons-container {
+    margin-top: 5px;
+
+    li {
+        .social-icon {
+            color: inherit;
+            font-size: 18px;
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            cursor: pointer;
+            .social-icon {
+                color: var(--theme-color);
+                transition: all 0.4s ease;
+            }
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
     }
 }
