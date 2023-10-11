@@ -56,8 +56,8 @@ const Specification = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="post-social">
-                    {/* <h6 className="product-title">share it</h6> */}
+                <div className="border-product">
+                    <h6 className="product-title">share it</h6>
                     <SocialIconsContainer />
                 </div>
             </div>
