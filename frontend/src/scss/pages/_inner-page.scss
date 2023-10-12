@@ -502,6 +502,8 @@
             margin-bottom: 15px;
 
             li {
+                // border: 2px solid red;
+                // font-size: 18px;
                 & + li {
                     padding-left: 15px;
                     margin-left: 15px;
@@ -947,6 +949,15 @@
         padding-top: 15px;
         padding-bottom: 20px;
         border-top: 1px dashed $round-border;
+        .social-icons-container {
+            li {
+                & + li {
+                    padding-left: 15px;
+                    margin-left: 15px;
+                    border-left: 1px solid $round-border;
+                }
+            }
+        }
     }
 
     h2 {
@@ -2589,7 +2600,7 @@
 }
 
 .social-icons-container {
-    margin-top: 5px;
+    // margin-top: 5px;
 
     li {
         .social-icon {
