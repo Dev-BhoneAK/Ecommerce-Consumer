@@ -2,7 +2,6 @@
     Slider css start
 ==========================**/
 
-
 .snow-slider {
     position: relative;
 
@@ -13,7 +12,6 @@
 
 .home-slider,
 .center-slider {
-
     .slick-prev,
     .slick-next {
         opacity: 0;
@@ -38,7 +36,7 @@
         right: 1px;
 
         &:before {
-            content: "\f105";
+            content: '\f105';
             font-family: $font-awesome;
             font-size: 10px;
         }
@@ -49,7 +47,7 @@
         z-index: 1;
 
         &:before {
-            content: "\f104";
+            content: '\f104';
             font-family: $font-awesome;
             font-size: 10px;
         }
@@ -59,7 +57,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 75vh;
+        // height: 75vh;
     }
 
     .slider-details {
@@ -97,7 +95,7 @@
 
             &:after,
             &:before {
-                content: "";
+                content: '';
                 position: absolute;
                 width: 12px;
                 height: 12px;
@@ -136,7 +134,7 @@
 
     .slider-contain {
         width: 100%;
-        height: 75vh;
+        // height: 75vh;
         display: flex;
         align-items: center;
 
@@ -220,10 +218,10 @@
     .p-bottom {
         .slider-contain {
             align-items: flex-end;
-            padding-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
-            ;
-
-            >div {
+            padding-bottom: calc(
+                20px + (50 - 20) * ((100vw - 320px) / (1920 - 320))
+            );
+            > div {
                 padding: 25px 30px;
                 background-color: $white;
             }
@@ -270,7 +268,6 @@
                 span {
                     animation: movebounce 3.2s linear infinite;
                 }
-
             }
 
             &.decor-2 {
@@ -320,7 +317,6 @@
     }
 
     &:hover {
-
         .slick-prev,
         .slick-next {
             opacity: 1;
@@ -349,7 +345,8 @@
 
     &.home-fashion {
         .slider-contain {
-            padding: 0 calc(20px + (100 - 20) * ((100vw - 320px) / (1920 - 320)));
+            padding: 0
+                calc(20px + (100 - 20) * ((100vw - 320px) / (1920 - 320)));
         }
     }
 }
@@ -362,7 +359,6 @@
 .home-slider {
     &.text-white {
         .slider-contain {
-
             h1,
             h4 {
                 color: $white;
@@ -511,7 +507,7 @@
     }
 
     .home-banner {
-        >div {
+        > div {
             img {
                 width: 100%;
             }
@@ -548,7 +544,9 @@
             h3 {
                 margin-bottom: 0;
                 margin-top: 10px;
-                font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(
+                    16px + (24 - 16) * ((100vw - 320px) / (1920 - 320))
+                );
             }
         }
     }
@@ -560,7 +558,7 @@
         margin-right: -20px;
 
         .slick-slide {
-            >div {
+            > div {
                 padding-left: 20px;
                 padding-right: 20px;
             }
