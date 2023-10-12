@@ -32,20 +32,21 @@ const MainSlider = () => {
                             >
                                 <picture>
                                     <source
-                                        media="(max-width: 600px)"
+                                        media="(max-width: 767px)"
                                         srcSet="/assets/images/home_slider/lenovo-mobile.png"
                                     />
-                                    <source
+                                    {/* <source
                                         media="(max-width: 1200px)"
                                         srcSet="/assets/images/home_slider/lenovox1200.png"
-                                    />
+                                    /> */}
                                     <img
                                         src="/assets/images/home_slider/lenovo.png"
                                         alt=""
                                         className="bg-img lazyload"
+                                        style={{ width: '100%' }}
                                     />
                                 </picture>
-                                <div
+                                {/* <div
                                     className="container"
                                     style={{
                                         position: 'absolute',
@@ -82,7 +83,7 @@ const MainSlider = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         {/* <div>
